@@ -1,6 +1,6 @@
 <?php
     if(isset($_GET["cadena"])){ 
-        $vocales = ["a", "e", "o", "i", "u", "á", "é", "ó", "ó", "ú"]; 
+        $vocales = ["a", "e", "o", "i", "u", "á", "é", "í", "ó", "ú", "à", "è", "ò", "ì", "ù", "ü"]; 
         $cadena = $_GET["cadena"];
         $countVocals = 0;
         function contarVocales($vocales, $cadena, &$countVocals){
