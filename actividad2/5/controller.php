@@ -1,8 +1,17 @@
 <?php
-    if(isset($_GET["cadena"]) || isset($_GET["subcadena"])){ 
-        
-        $cadena = (explode(" ",strtolower($_GET["cadena"])));  //Me separa la cádena en un array por la condición de espacio que le paso
-        $subcadena = strtolower($_GET["subcadena"]);
+    // !empty comprueba que el campo no está vacío al contrario que isset
+    if(!empty($_GET["cadena"]) || !empty($_GET["subcadena"])){ 
+        $cadena = preg_replace(array("/a/", "/á/", "/à/"), "a", strtolower($_GET["cadena"]));
+        $cadena = preg_replace(array("/í/", "/ì/"), "i", $cadena);
+        $cadena = preg_replace(array("/ú/", "/ù/"), "u", $cadena);
+        $cadena = preg_replace(array("/è/", "/é/"), "e", $cadena);
+        $cadena = preg_replace(array("/ò/", "/ó/"), "e", $cadena);
+        $cadena = (explode(" ",strtolower($cadena)));  //Me separa la cádena en un array por la condición de espacio que le paso
+        $subcadena = preg_replace(array("/a/", "/á/", "/à/"), "a", strtolower($_GET["subcadena"]));
+        $subcadena = preg_replace(array("/è/", "/é/"), "e", $subcadena);
+        $subcadena = preg_replace(array("/í/", "/ì/"), "i", $subcadena);
+        $subcadena = preg_replace(array("/ú/", "/ù/"), "u", $subcadena);
+        $subcadena = preg_replace(array("/ò/", "/ó/"), "e", $subcadena);
         
 
         
