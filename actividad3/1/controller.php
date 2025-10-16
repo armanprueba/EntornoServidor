@@ -6,7 +6,6 @@
 
         include('validar_ctl.php');
 
-        
     }else{
         header('Location: index.html');
     }
