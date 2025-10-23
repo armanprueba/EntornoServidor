@@ -12,7 +12,7 @@
     var_dump($nombre);
 
     ?>
-    <form name="formulario" method="get" action="<?php echo "distritos_ctl.php?nombre=". $nombre . "&apellidos=". $apellidos ?>">
+    <form name="formulario" method="get" action="distritos_ctl.php">
       <label for="lang">Lenguaje</label>
       <select name="distritos" id="distritos">;
         <?php
@@ -30,7 +30,12 @@
             }
         ?>
       </select>
-      <input type="checkbox" name="todos" id="todos" value="todos" />
+      <!--  Hay que poner las variables que pasemos como query string como parametros ocultos 
+        para que no los borre al enviarse el form-->
+      <input type="hidden" name="nombre" value="<?php echo $nombre?>" /> 
+      <input type="hidden" name="apellidos" value="<?php echo $apellidos?>" /><br> 
+      <label for="lang">Todos los distritos:</label>
+      <input type="checkbox" name="todos" id="todos" value="todos" /><br> 
       <input type="submit" value="Enviar" />
 </form>
 </body> 
