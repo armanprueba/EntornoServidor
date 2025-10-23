@@ -6,7 +6,13 @@
     <title>Document</title> 
 </head> 
 <body> 
-    <form name="formulario" method="get" action="distritos_ctl.php">
+     <?php 
+    $nombre = $_GET["nombre"];
+    $apellidos = $_GET["apellidos"];
+    var_dump($nombre);
+
+    ?>
+    <form name="formulario" method="get" action="<?php echo "distritos_ctl.php?nombre=". $nombre . "&apellidos=". $apellidos ?>">
       <label for="lang">Lenguaje</label>
       <select name="distritos" id="distritos">;
         <?php

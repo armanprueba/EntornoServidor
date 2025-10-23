@@ -1,11 +1,18 @@
 <?php
     if(isset($_GET["todos"])){
+        $nombre = $_GET["nombre"];
+        $apellidos = $_GET["apellidos"];
+        ?><h2>Bienvenido <?php echo $nombre. " ". $apellidos. " !"?></h2><?php
+
+
         require_once("datos_distritos.php");
-        ?><ul><?php ?>
+        ?><ul><?php 
         foreach($datos_distritos as $distrito => $habitantes){
-            ?><li><?php ?>
+            ?><li><?php echo $distrito. ": ".  $habitantes ." hab."?><?php
+            
         }
-    ?><ul><?php ?>
+         ?>
+        </ul><?php 
     }
     elseif(isset($_GET["distritos"])){ 
        $distritos = explode(" ", $_GET["distritos"]);
@@ -17,3 +24,4 @@
     }else{
         header('Location: index.html');
     }
+    ?>
