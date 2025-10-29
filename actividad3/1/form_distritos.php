@@ -9,11 +9,10 @@
      <?php 
     $nombre = $_GET["nombre"];
     $apellidos = $_GET["apellidos"];
-    var_dump($nombre);
 
     ?>
     <form name="formulario" method="get" action="distritos_ctl.php">
-      <label for="lang">Lenguaje</label>
+      <label for="lang">Distrito</label>
       <select name="distritos" id="distritos">;
         <?php
             require "datos_distritos.php";
@@ -37,6 +36,8 @@
       <label for="lang">Todos los distritos:</label>
       <input type="checkbox" name="todos" id="todos" value="todos" /><br> 
       <input type="submit" value="Enviar" />
+      <br></br>
+      <a href="menu.php?nombre=<?php echo $nombre ?>&apellidos=<?php echo $apellidos?>"> Volver</a>
 </form>
 </body> 
 </form> 

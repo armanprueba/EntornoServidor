@@ -26,13 +26,4 @@
              header('Location: menu.php?nombre='. $nombre. "&apellidos=". $apellidos);
         }
        
-
-
-
-
-
-
-
-
-
 ?>

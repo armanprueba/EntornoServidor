@@ -25,3 +25,5 @@
         header('Location: index.html');
     }
     ?>
+    <br></br>
+      <a href="menu.php?nombre=<?php echo $nombre ?>&apellidos=<?php echo $apellidos?>"> Volver</a>
