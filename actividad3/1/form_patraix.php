@@ -16,8 +16,6 @@
       <label for="lang">Barrio</label>
       <select name="barrios" id="barrios">;
         <?php
-        
-        
             /* Si se hace  $barrio => $numero se coge también el nombre del barrio, 
                con solo $barrio solo cogemos el número de numero del barrio*/
             foreach($datos_patraix as $numero => $barrio){
@@ -33,11 +31,11 @@
       <input type="hidden" name="apellidos" value="<?php echo $apellidos?>" /><br> 
       <label for="lang">Todos los barrios:</label>
       <input type="checkbox" name="todos" id="todos" value="todos" /><br> 
-      <input type="submit" value="Enviar" />
+      <input type="submit" name="submit" value="Enviar" />
+      </form>
       <br></br>
       <a href="menu.php?nombre=<?php echo $nombre ?>&apellidos=<?php echo $apellidos?>"> Volver</a>
-</form>
 </body> 
-</form> 
+
 </html> 
 

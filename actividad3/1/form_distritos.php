@@ -35,11 +35,11 @@
       <input type="hidden" name="apellidos" value="<?php echo $apellidos?>" /><br> 
       <label for="lang">Todos los distritos:</label>
       <input type="checkbox" name="todos" id="todos" value="todos" /><br> 
-      <input type="submit" value="Enviar" />
+      <input type="submit" name="submit" value="Enviar" />
+      </form>
       <br></br>
       <a href="menu.php?nombre=<?php echo $nombre ?>&apellidos=<?php echo $apellidos?>"> Volver</a>
-</form>
+
 </body> 
-</form> 
 </html> 
 

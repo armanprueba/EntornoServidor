@@ -1,7 +1,9 @@
 <?php
-    if(isset($_GET["todos"])){
+if(isset($_GET["submit"])){
         $nombre = $_GET["nombre"];
         $apellidos = $_GET["apellidos"];
+    if(isset($_GET["todos"])){
+        
         ?><h2>Bienvenido <?php echo $nombre. " ". $apellidos. " !"?></h2><?php
 
 
@@ -22,6 +24,10 @@
        echo "El distrito " . $nom_distrito . " tiene " . $habitantes . " habitantes";
 
     }else{
+        header('Location: index.html');
+    }
+}
+else{
         header('Location: index.html');
     }
     ?>
