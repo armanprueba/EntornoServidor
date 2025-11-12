@@ -9,6 +9,7 @@ if(isset($_POST["submit"])){
         var_dump(serialize($arrayFrases));
         var_dump(unserialize(serialize($arrayFrases)));*/
         crearCookie("frases", serialize($arrayFrases));
+        header("Location: ../index.php");
 
 
     }else{
@@ -17,6 +18,6 @@ if(isset($_POST["submit"])){
         crearCookie("frases", serialize($arrayFrases));
         //var_dump($arrayFrases);
         echo "Frase introducida";
-        header('Refresh: 10; URL=../index.html');
+        header('Refresh: 5; URL=../index.php');
     }
 }

@@ -16,7 +16,7 @@
             }
         }
     ?>
-    <a href="../index.html">Inicio</a><br><br>
+    <a href="../index.php">Inicio</a><br><br>
     <?php
     if(isset($_COOKIE["frases"])){
         ?><a href="../controller/reiniciar.php">Borrar</a> <?php

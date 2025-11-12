@@ -2,9 +2,10 @@
     include "eliminarCookie.php";
     if(isset($_COOKIE["frases"])){
         eliminarCookie("frases");
+        header("Location: ../index.php");
     }
     else{
-        header("../index.html");
+        header("Location: ../index.php");
     }
 
 ?>
