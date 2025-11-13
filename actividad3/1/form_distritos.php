@@ -13,7 +13,7 @@
     ?>
     <form name="formulario" method="get" action="distritos_ctl.php">
       <label for="lang">Distrito</label>
-      <select name="distritos" id="distritos">;
+      <select name="distritos" id="distritos">
         <?php
             require "datos_distritos.php";
             /* Si se hace  $distrito => $habitantes se coge también el nombre del distrito, 

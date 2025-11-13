@@ -1,5 +1,5 @@
-<?php include "view/header.php"
-
+<?php include "view/header.php";
+session_start();
 
 ?>
 <a href="view/form.php">Introducir una frase</a> <br>
